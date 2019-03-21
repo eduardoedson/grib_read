@@ -166,9 +166,9 @@ def read_cmdline():
         python read.py -g grib_file.bufr -p 1 -o data.json
     '''
     p = argparse.ArgumentParser()
-    p.add_argument('-g', '--grib', help = 'GRIB que será lido')
-    p.add_argument('-p', '--position', help = 'Posicao do GRIB no arquivo')
-    p.add_argument("-o", "--output", help = "Nome do arquivo de saida")
+    p.add_argument('-g', '--grib', help='GRIB que será lido')
+    p.add_argument('-p', '--position', help='Posicao do GRIB no arquivo')
+    p.add_argument('-o', '--output', help='Nome do arquivo de saida')
     args = p.parse_args()
     return args
 
