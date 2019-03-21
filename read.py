@@ -11,6 +11,7 @@ To run the program
 '''
 import argparse 
 import json
+import time
 
 
 from eccodes import *
