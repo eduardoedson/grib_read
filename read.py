@@ -143,7 +143,6 @@ def pegarValores(arquivo, grib_position = 1):
     lat, lon = f_lat, f_lon
     # PEGA TODOS OS PONTOS DO GRIB
     while lat <= l_lat and lon <= l_lon:
-        i += 1
         indices = calcIndices([f_lat, l_lat], [f_lon, l_lon], float(lat), float(lon), distPontos)
         pontosProximos = calcPontosProx(indices, distPontos, [f_lat, l_lat], [f_lon, l_lon])
         distancias = calcDistancia(float(lat), float(lon), pontosProximos, indices)
