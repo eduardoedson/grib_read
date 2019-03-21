@@ -173,10 +173,15 @@ def read_cmdline():
 
 
 def main():
+    inicio_execucao = time.time()
     cmdLine = read_cmdline() # Ler parâmetros de entrada
     valores = pegarValores(cmdLine.grib, cmdLine.position)
     with open(cmdLine.output, 'w') as outfile:  
         json.dump(valores, outfile)
+    fim_execucao = time.time()
+    tempo = int(fim_execucao - inicio_execucao)
+    minutos, segundos = tempo // 60, tempo % 60
+    print 'Tempo de Execução: ' + str(minutos).zfill(2) + ':' + str(segundos).zfill(2)
 
 
 if __name__ == '__main__':
