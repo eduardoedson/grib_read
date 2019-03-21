@@ -181,7 +181,7 @@ def main():
     fim_execucao = time.time()
     tempo = int(fim_execucao - inicio_execucao)
     minutos, segundos = tempo // 60, tempo % 60
-    print 'Tempo de Execução: ' + str(minutos).zfill(2) + ':' + str(segundos).zfill(2)
+    print 'Tempo de Execução - ' + str(minutos).zfill(2) + ':' + str(segundos).zfill(2)
 
 
 if __name__ == '__main__':
